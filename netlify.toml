@@ -1,4 +1,7 @@
+[build]
+publish = "dist/hato-app/browser"
+command = "ng build"
 [[redirects]]
-  from = "/*"
-  status = 200
-  to = "/index.html"
+from = "/*"
+to = "/index.html"
+status = 200
