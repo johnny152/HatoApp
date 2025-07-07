@@ -1,0 +1,9 @@
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let archivo of archivos">
+    <p>{{ archivo }}</p>
+    <button (click)="reproducirAudio(archivo)">▶ Reproducir</button>
+    <button (click)="detenerAudio()">⏹ Detener</button>
+  </div>
+</div>
+
+
