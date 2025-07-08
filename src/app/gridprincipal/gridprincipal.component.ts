@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { archivoService } from '../archivos.service';
 import { CommonModule } from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-gridprincipal',
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './gridprincipal.component.html',
   styleUrl: './gridprincipal.component.css',
 })

@@ -1,9 +1,39 @@
 <div class="grid-container">
   <div class="grid-item" *ngFor="let archivo of archivos">
     <p>{{ archivo }}</p>
-    <button (click)="reproducirAudio(archivo)">▶ Reproducir</button>
-    <button (click)="detenerAudio()">⏹ Detener</button>
+    <figure id="img-div">
+      <img id="image"  src="/pic.jpg" />
+    </figure>
+    <div class="controls">
+      <ul style="padding-left: 0px !important">
+        <li>
+          <div class="icon-pause btn">
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="pause"
+            ></mat-icon>
+          </div>
+        </li>
+        <li class="play">
+          <div class="icon-play btn" (click)="reproducirAudio(archivo)">
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="play_arrow"
+            ></mat-icon>
+          </div>
+        </li>
+        <li>
+          <div class="icon-stop btn" (click)="detenerAudio()">
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="stop"
+            ></mat-icon>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
-
-
