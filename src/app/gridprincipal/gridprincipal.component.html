@@ -6,7 +6,7 @@
     </figure>
     <div class="controls">
       <ul style="padding-left: 0px !important">
-        <li>
+        <li (click)="pausarAudio()">
           <div class="icon-pause btn">
             <mat-icon
               aria-hidden="false"
@@ -15,8 +15,8 @@
             ></mat-icon>
           </div>
         </li>
-        <li class="play">
-          <div class="icon-play btn" (click)="reproducirAudio(archivo)">
+        <li class="play" (click)="reproducirAudio(archivo)">
+          <div class="icon-play btn" >
             <mat-icon
               aria-hidden="false"
               aria-label="Example home icon"
@@ -24,8 +24,8 @@
             ></mat-icon>
           </div>
         </li>
-        <li>
-          <div class="icon-stop btn" (click)="detenerAudio()">
+        <li (click)="detenerAudio()">
+          <div class="icon-stop btn" >
             <mat-icon
               aria-hidden="false"
               aria-label="Example home icon"

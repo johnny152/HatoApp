@@ -42,6 +42,11 @@ export class GridprincipalComponent {
     }
   }
 
+  pausarAudio(){
+   this.audioActual?.pause();
+
+  }
+
 }
 
 
