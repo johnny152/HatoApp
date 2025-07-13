@@ -4,7 +4,7 @@
   padding: 16px;
   padding-left: 10px !important;
   padding-right: 10px !important;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
 
 }
 
@@ -18,7 +18,8 @@
   border-radius: 15px;
   padding-right: 10px;
   width: 100% !important;
-  height: 20em;
+  height: 16em;
+  min-width: 200px;
 }
 
 .grid-item image {
@@ -108,6 +109,8 @@ body {
 
 .controls {
   padding: 1em;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 
@@ -121,7 +124,7 @@ body {
 .controls ul li {
   display: inline-block;
   margin-right: .17em;
-  padding: .9em;
+  padding: .4em;
   -webkit-border-radius: 20%;
   -moz-border-radius: 20%;
   -ms-border-radius: 20%;
@@ -157,7 +160,7 @@ body {
 }
 
 .play {
-  padding: 1.6em !important;
+  padding: 0.8em !important;
 }
 
 

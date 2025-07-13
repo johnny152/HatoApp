@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-gridprincipal',
-  imports: [CommonModule, MatIconModule ],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './gridprincipal.component.html',
   styleUrl: './gridprincipal.component.css',
 })
@@ -46,6 +46,10 @@ export class GridprincipalComponent {
 
   pausarAudio() {
     this.audioActual?.pause();
+
+  }
+  overEvent() {
+    console.log("mouse over");
 
   }
 

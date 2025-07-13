@@ -1,11 +1,11 @@
 <div class="grid-container">
-  <div class="grid-item" *ngFor="let archivo of archivos">
+  <div class="grid-item" *ngFor="let archivo of archivos"  (mouseover)="overEvent()">
     <p>{{ archivo }}</p>
     <figure id="img-div">
       <img id="image" src="/pic.jpg" />
     </figure>
     <div class="controls">
-      <ul style="padding-left: 0px !important">
+      <ul style="padding-left: 0px !important" >
         <li (click)="pausarAudio()">
           <div class="icon-pause btn">
             <mat-icon
