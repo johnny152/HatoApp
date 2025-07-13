@@ -2,7 +2,7 @@
   <div class="grid-item" *ngFor="let archivo of archivos">
     <p>{{ archivo }}</p>
     <figure id="img-div">
-      <img id="image"  src="/pic.jpg" />
+      <img id="image" src="/pic.jpg" />
     </figure>
     <div class="controls">
       <ul style="padding-left: 0px !important">
@@ -16,7 +16,7 @@
           </div>
         </li>
         <li class="play" (click)="reproducirAudio(archivo)">
-          <div class="icon-play btn" >
+          <div class="icon-play btn">
             <mat-icon
               aria-hidden="false"
               aria-label="Example home icon"
@@ -25,7 +25,7 @@
           </div>
         </li>
         <li (click)="detenerAudio()">
-          <div class="icon-stop btn" >
+          <div class="icon-stop btn">
             <mat-icon
               aria-hidden="false"
               aria-label="Example home icon"

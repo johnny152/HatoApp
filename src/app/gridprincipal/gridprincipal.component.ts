@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { archivoService } from '../archivos.service';
 import { CommonModule } from '@angular/common';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-gridprincipal',
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule ],
   templateUrl: './gridprincipal.component.html',
   styleUrl: './gridprincipal.component.css',
 })
@@ -15,13 +15,15 @@ export class GridprincipalComponent {
   archivos: string[] = [];
   audioActual: HTMLAudioElement | null = null;
 
-
-  constructor(private ArchivoService: archivoService) {}
+  constructor(private ArchivoService: archivoService) { }
 
   ngOnInit() {
+
     this.ArchivoService.obtenerArchivos().subscribe(data => {
       this.archivos = data;
+
     });
+
   }
 
   reproducirAudio(nombre: string) {
@@ -42,8 +44,8 @@ export class GridprincipalComponent {
     }
   }
 
-  pausarAudio(){
-   this.audioActual?.pause();
+  pausarAudio() {
+    this.audioActual?.pause();
 
   }
 

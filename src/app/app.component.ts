@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
-import { GridprincipalComponent } from "./gridprincipal/gridprincipal.component";
+import { LoaderComponent } from "./loader/loader.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, GridprincipalComponent],
+  imports: [RouterOutlet, NavbarComponent, LoaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

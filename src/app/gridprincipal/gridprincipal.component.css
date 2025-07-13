@@ -5,6 +5,7 @@
   padding-left: 10px !important;
   padding-right: 10px !important;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+
 }
 
 .grid-item {
@@ -18,6 +19,11 @@
   padding-right: 10px;
   width: 100% !important;
   height: 20em;
+}
+
+.grid-item image {
+
+  opacity: 0.5;
 }
 
 
