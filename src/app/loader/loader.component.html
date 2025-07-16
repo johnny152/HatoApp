@@ -2,7 +2,11 @@
   class="contenedor animate__animated animate__headShake animate__infinite infinite animate__slow"
   [hidden]="!showParent"
 ></div>
-<app-gridprincipal> </app-gridprincipal>
+<app-gridprincipal
+  [hidden]="!showChild"
+  class="animate__animated animate__bounceIn"
+>
+</app-gridprincipal>
 <app-floatbutton
   [hidden]="!showChild"
   class="animate__animated animate__bounceIn"
