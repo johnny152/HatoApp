@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { GridprincipalComponent } from "../gridprincipal/gridprincipal.component";
 import { CommonModule } from '@angular/common';
+import { FloatbuttonComponent } from '../floatbutton/floatbutton.component';
 
 @Component({
   selector: 'app-loader',
-  imports: [GridprincipalComponent, CommonModule],
+  imports: [GridprincipalComponent, CommonModule,  FloatbuttonComponent],
   templateUrl: './loader.component.html',
   styleUrl: './loader.component.css'
 })

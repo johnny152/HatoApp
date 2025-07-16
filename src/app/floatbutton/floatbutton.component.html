@@ -1,0 +1,44 @@
+<div class="dialog_scrim" *ngIf="openMenu">
+</div>
+
+<button mat-fab color="accent" (click)="clickMenu()"
+    class="menu-button"
+    [class.mat-elevation-z2]="!isOver"
+    [class.mat-elevation-z8]="isOver"
+    (mouseover)="isOver = true"
+    (mouseleave)="isOver = false">
+  <i class="material-icons" *ngIf="!openMenu">menu</i>
+  <i class="material-icons" *ngIf="openMenu">close</i>
+</button>
+
+<!-- menu button -->
+<button mat-mini-fab
+  class="action-button one mat-elevation-z8"
+  *ngIf="openMenu"
+  color="basic"
+  (click)="hello( 'button one')">
+  <i class="material-icons">forward_to_inbox</i>
+</button>
+
+<button mat-raised-button
+  class="label labelone mat-elevation-z8"
+  *ngIf="openMenu"
+  color="basic"
+  (click)="hello('button one')">
+  Say Hello One
+</button>
+
+<button mat-mini-fab
+  class="action-button two mat-elevation-z8"
+  *ngIf="openMenu"
+  color="basic"
+  (click)="hello('button two')">
+  <i class="material-icons">info</i>
+</button>
+<button mat-raised-button
+  class="label labeltwo mat-elevation-z8"
+  *ngIf="openMenu"
+  color="basic"
+  (click)="hello('button two')">
+  Say Hello Two
+</button>
