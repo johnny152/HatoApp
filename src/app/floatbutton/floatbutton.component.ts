@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatMiniFabButton } from '@angular/material/button';
 import { MatFabButton } from '@angular/material/button';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { InfoModalComponent } from '../info-modal/info-modal.component';
 
 
 @Component({
@@ -14,6 +16,7 @@ export class FloatbuttonComponent {
 
   public openMenu: boolean = false;
   public formulario: string = 'https://docs.google.com/forms/d/e/1FAIpQLSc27p-XHu0KD1s9egXf_yN5Bc1s-6WaSN-3uRbfgY1ME5dNlg/viewform?usp=header';
+  constructor(private dialog: MatDialog) {}
 
   isOver = false;
 
@@ -21,12 +24,21 @@ export class FloatbuttonComponent {
     this.openMenu = !this.openMenu;
   }
 
-  hello(mex: string) {
-    alert('Hello ' + mex + '!');
-  }
-
-
   abrirFormulario() {
     window.open(this.formulario, "_blank");
+  }
+  confirmDialog() {
+    const ref: MatDialogRef<InfoModalComponent> = this.dialog.open(
+      InfoModalComponent,
+      {
+        width: '600px',
+        height: '425px',
+        data: {
+          message: 'Are you sure to cancel without saving the data?',
+        },
+        backdropClass: 'confirmDialogComponent',
+        hasBackdrop: true,
+      }
+    );
   }
 }

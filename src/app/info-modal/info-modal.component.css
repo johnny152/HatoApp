@@ -1,0 +1,38 @@
+#image {
+  border-radius: 10%;
+  width: 90%;
+  height: 300px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  background-color: #5b005b;
+}
+
+.fa:hover {
+  opacity: 0.5;
+}
+
+.presentacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.redes_sociales {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: center;
+  padding-top: 100px;
+}
