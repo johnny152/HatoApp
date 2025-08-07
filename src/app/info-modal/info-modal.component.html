@@ -1,10 +1,14 @@
 <div mat-dialog-content>
   <div class="card">
     <div class="presentacion">
-      <div class="img-bx">
-        <img id="image" src="/hato_img.JPG" />
-      </div>
+      <div class="slideshow-container" #myDiv>
+        <div class="mySlides fade">
+          <img [src]="images[slideIndex]" class="img_avt" />
+        </div>
 
+        <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+        <a class="next" (click)="plusSlides(1)">&#10095;</a>
+      </div>
       <div>
         <h2 style="text-align: center">Hato APP</h2>
         <p>Desarrollado con mucho cariño para Hato Joestar y su comunidad.</p>
@@ -15,11 +19,15 @@
         <p></p>
         <span
           ><div class="redes_sociales">
-            <a href="#" class="fa fa-twitch"></a>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-instagram"></a>
+            <a target="_blank" href="{{ twitch }}" class="fa fa-twitch"></a>
+            <a target="_blank" href="{{ facebook }}" class="fa fa-facebook"></a>
+            <a
+              target="_blank"
+              href="{{ instagram }}"
+              class="fa fa-instagram"
+            ></a>
+            <a target="_blank" href="{{ twitter }}" class="fa fa-twitter"></a>
+            <a target="_blank" href="{{ youtube }}" class="fa fa-youtube"></a>
           </div>
         </span>
       </div>

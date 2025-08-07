@@ -9,4 +9,7 @@ export class archivoService {
   obtenerArchivos(): Observable<string[]> {
     return this.http.get<string[]>('assets/audios/audios.json');
   }
-}
+
+  obtenerImagenes(): Observable<string[]> {
+    return this.http.get<string[]>('assets/img_slider/img_slider.json');
+  }}

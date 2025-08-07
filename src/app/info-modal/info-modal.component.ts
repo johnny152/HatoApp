@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ElementRef } from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialog,
@@ -22,18 +22,28 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class InfoModalComponent {
   message = '';
-  public facebook: string = '';
-  public twitch: string = "";
-  public twitter: string = "";
-  public instagram: string = "";
+  public facebook: string = 'https://www.facebook.com/HatoJoestar';
+  public twitch: string = 'https://www.twitch.tv/hatojoestar';
+  public twitter: string = 'https://x.com/HatoJoestar';
+  public instagram: string = 'https://www.instagram.com/hatojoestar/';
+  public youtube: string = 'https://www.youtube.com/@HatoJoestar'
+  slideIndex: number = 0;
+
+  images: any = [
+    'assets/img_slider/hato_img.JPG',
+    'assets/img_slider/hato_img2.jpg',
+    'assets/img_slider/hato_img3.png',
+  ];
 
 
-  constructor(
-    private dialogRef: MatDialogRef<InfoModalComponent>,
-    @Inject(MAT_DIALOG_DATA) data: { message: string }
-  ) {
-    this.message = data ? data.message : '';
+
+  plusSlides(n: number) {
+    debugger;
+    if (this.slideIndex >= 2) {
+      this.slideIndex = 0;
+    } else {
+      this.slideIndex += n;
+
+    }
   }
-
-
 }
