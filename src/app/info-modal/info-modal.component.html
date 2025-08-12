@@ -3,16 +3,16 @@
     <div class="presentacion">
       <div class="slideshow-container" #myDiv>
         <div class="mySlides fade">
-          <img [src]="images[slideIndex]" class="img_avt" />
+          <img [src]="images[slideIndex]" id="img_content" name="img_content" class="img_avt" />
         </div>
 
-        <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
-        <a class="next" (click)="plusSlides(1)">&#10095;</a>
+        <a class="prev">&#10094;</a>
+        <a class="next" (click)="avanzarImage(1)">&#10095;</a>
       </div>
       <div>
         <h2 style="text-align: center">Hato APP</h2>
-        <p>Desarrollado con mucho cariño para Hato Joestar y su comunidad.</p>
-        <p>
+        <p class="txt_presentacion">Desarrollado con mucho cariño para Hato Joestar y su comunidad.</p>
+        <p class="txt_presentacion">
           Si deseas conocer mas de ella no olvides revisar sus redes sociales.
         </p>
         <p></p>
