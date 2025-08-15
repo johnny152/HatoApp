@@ -33,7 +33,7 @@ export class InfoModalComponent {
   classesToAdd: any = ['animate__animated animate__bounceIn'];
 
   images: any = [
-    'assets/img_slider/hato_img.JPG',
+    'assets/img_slider/hato_img.jpg',
     'assets/img_slider/hato_img2.jpg',
     'assets/img_slider/hato_img3.png',
     'assets/img_slider/hato_img4.png',

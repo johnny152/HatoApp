@@ -32,7 +32,7 @@ export class FloatbuttonComponent {
       InfoModalComponent,
       {
         width: '600px',
-        height: '425px',
+        height: '430px',
         data: {
           message: 'Are you sure to cancel without saving the data?',
         },
